@@ -1,0 +1,77 @@
+.carousel-img {
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-img:after {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,0.1);
+}
+
+.carousel-item h5 {
+  text-shadow: 2px 2px #000;
+  font-size: 32px;
+}
+
+.carousel-item p {
+  font-size: 24px;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px #000;
+}
+
+.card {
+  border: none;
+  overflow: hidden;
+}
+
+.card-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  min-height: 300px;
+}
+
+@media (max-width: 1399px) {
+  .card-img {
+    min-height: 355px;
+  }
+}
+
+@media (max-width: 1199px) {
+  #press img {
+    height: 35px;
+  }
+  .card-img {
+    min-height: 375px;
+  }
+}
+
+#metaguard {
+  min-height: 800px;
+  background-image: url('img/metaguard-half.png');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+#metaguard .container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.text-justify {
+  text-align: justify;
+}
