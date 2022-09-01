@@ -3,16 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Metaverse Research | Berkeley RDI</title>
-    <meta name="description" content="Metaverse research at the UC Berkeley Center for Responsible, Decentralized Intelligence">
+    <title>Zero-Knowledge Proof Research | Berkeley RDI</title>
+    <meta name="description" content="Zero-Knowledge Proof research at the UC Berkeley Center for Responsible, Decentralized Intelligence">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="metaverse.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#">Metaverse Research @ <img src="img/rdi-sm.png" height="30"></a>
+        <a class="navbar-brand" href="#">ZKP Research @ <img src="img/rdi-sm.png" height="30"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,13 +32,13 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Metaverse Research
+                ZKP Research
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="https://rdi.berkeley.edu/metadata">MetaData</a></li>
-                <li><a class="dropdown-item" href="https://rdi.berkeley.edu/metaguard">MetaGuard</a></li>
+                <li><a class="dropdown-item" href="https://eprint.iacr.org/2022/1010">Orion</a></li>
+                <li><a class="dropdown-item" href="https://eprint.iacr.org/2019/317">Libra</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item active" href="https://rdi.berkeley.edu/metaverse">View All</a></li>
+                <li><a class="dropdown-item active" href="https://rdi.berkeley.edu/zkp">View All</a></li>
               </ul>
             </li>
           </ul>
@@ -43,22 +49,44 @@
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="carousel-img" style="background-image: url('img/metaguard.png')"></div>
+          <div class="carousel-img" style="background-image: url('img/orion.jpg')"></div>
           <div class="carousel-caption d-none d-md-block">
-            <h5 class="text-shadow mb-0">MetaGuard</h5>
-            <p class="mb-2 text-shadow">&ldquo;Going Incognito in the Metaverse&rdquo;</p>
-            <p><a class="btn btn-primary btn-sm" href="https://rdi.berkeley.edu/metaguard"><i class="fa fa-arrow-up-right-from-square"></i>&nbsp; Learn More</a>&nbsp;<a class="btn btn-primary btn-sm" href="https://arxiv.org/abs/2208.05604" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
+            <h5 class="text-shadow mb-0">Orion</h5>
+            <p class="mb-2 text-shadow">&ldquo;Scalable Polynomial Commitment and Zero-Knowledge Proof&rdquo;</p>
+            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2022/1010" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
           </div>
         </div>
+
+
         <div class="carousel-item">
-          <div class="carousel-img" style="background-image: url('img/metadata.png')"></div>
+          <div class="carousel-img" style="background-image: url('img/libra.jpg')"></div>
           <div class="carousel-caption d-none d-md-block">
-            <h5 class="text-shadow mb-0">MetaData</h5>
-            <p class="mb-2 text-shadow">&ldquo;Exploring the Unprecedented Privacy Risks of the Metaverse&rdquo;</p>
-            <p><a class="btn btn-primary btn-sm" href="https://rdi.berkeley.edu/metadata"><i class="fa fa-arrow-up-right-from-square"></i>&nbsp; Learn More</a>&nbsp;<a class="btn btn-primary btn-sm" href="https://arxiv.org/abs/2207.13176" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
+            <h5 class="text-shadow mb-0">Libra</h5>
+            <p class="mb-2 text-shadow">&ldquo;Efficient Prover for Layered Arithmetic Circuit&rdquo;</p>
+            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2019/317" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-img" style="background-image: url('img/virgo.jpg')"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-shadow mb-0">Virgo</h5>
+            <p class="mb-2 text-shadow">&ldquo;Removing Trusted Setup for Libra&rdquo;</p>
+            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2019/1482" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-img" style="background-image: url('img/placeholder.png')"></div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-shadow mb-0">Virgo++</h5>
+            <p class="mb-2 text-shadow">&ldquo;Extending from Layered Circuit to Arbitrary Circuit&rdquo;</p>
+            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2020/1247.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
           </div>
         </div>
       </div>
@@ -89,28 +117,29 @@
           <div class="col-4">
             <div class="row align-items-center">
               <div class="col-lg-6 text-lg-end">
-                <img src="img/vivek.jpg" height="120" class="rounded-circle" />
+                <img src="img/xtc.jpg" height="120" class="rounded-circle" />
               </div>
               <div class="col-lg-6 text-lg-start">
-                <h3 class="text-truncate">Vivek Nair</h3>
-                <a class="btn btn-primary btn-sm mt-2" href="https://nair.me" target="_blank"><i class="fa fa-link"></i>&nbsp; Website</a>
+                <h3 class="text-truncate">Tiancheng Xie</h3>
+                <a class="btn btn-primary btn-sm mt-2" href="https://niconiconi.github.io/en_index.html" target="_blank"><i class="fa fa-link"></i>&nbsp; Website</a>
               </div>
             </div>
           </div>
           <div class="col-4">
             <div class="row align-items-center">
               <div class="col-lg-6 text-lg-end">
-                <img src="img/gonzalo.jpg" height="120" class="rounded-circle" />
+                <img src="img/zjh.jpg" height="120" class="rounded-circle" />
               </div>
               <div class="col-lg-6 text-lg-start">
-                <h3 class="text-truncate">Gonzalo Munilla Garrido</h3>
-                <a class="btn btn-primary btn-sm mt-2" href="https://www.linkedin.com/in/gonzalo-munilla/" target="_blank"><i class="fa fa-link"></i>&nbsp; Website</a>
+                <h3 class="text-truncate">Jiaheng Zhang</h3>
+                <a class="btn btn-primary btn-sm mt-2" href="https://zjhzjh123.github.io" target="_blank"><i class="fa fa-link"></i>&nbsp; Website</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!--
     <div class="bg-light py-4" id="press">
       <div class="container">
         <h5 class="mb-4"><i>Featured in:</i></h5>
@@ -148,41 +177,81 @@
         </div>
       </div>
     </div>
+    -->
+
     <div class="bg-secondary py-5">
       <div class="container">
         <div class="card">
           <div class="row align-items-center">
             <div class="col-lg-4">
-              <div class="card-img" style="background-image: url('img/metadata-thumb.png')">
+              <div class="card-img" style="background-image: url('img/orion.jpg')">
               </div>
             </div>
             <div class="col-lg-8">
               <div class="p-4">
-                <h4>MetaData: Exploring the Unprecedented Privacy Risks of the Metaverse</h4>
-                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Vivek Nair &middot; Gonzalo Munilla Garrido &middot; Dawn Song &nbsp;|&nbsp; https://doi.org/10.48550/arXiv.2207.13176</h6>
-                <p class="text-justify">Thirty study participants playtested an innocent-looking "escape room" game in virtual reality (VR). Behind the scenes, an adversarial program had accurately inferred over 25 personal data attributes, from anthropometrics like height and wingspan to demographics like age and gender, within just a few minutes of gameplay. In this work, we illustrate how VR attackers can covertly ascertain dozens of personal data attributes from seemingly-anonymous users of popular metaverse applications&hellip;</p>
-                <p class="mb-0"><a class="btn btn-primary btn-sm" href="https://rdi.berkeley.edu/metadata"><i class="fa fa-arrow-up-right-from-square"></i>&nbsp; Learn More</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://arxiv.org/abs/2207.13176" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://github.com/metaguard/metadata" target="_blank"><i class="fab fa-github"></i>&nbsp; View Repo</a></p>
+                <h4>Orion: Zero Knowledge Proof with Linear Prover Time</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Tiancheng Xie &middot; Yupeng Zhang &middot; Dawn Song &nbsp;|&nbsp; https://eprint.iacr.org/2022/1010</h6>
+                <p class="text-justify">Zero-knowledge proof is a powerful cryptographic primitive that has found various applications in the real world. However, existing schemes with succinct proof size suffer from a high overhead on the proof generation time that is super-linear in the size of the statement represented as an arithmetic circuit, limiting their efficiency and scalability in practice. In this paper, we present Orion, a new zero-knowledge argument system that achieves \(O(N)\) prover time of field operations and hash functions and \(O(\log^2 N)\) proof size.&hellip;</p>
+                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2022/1010" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://github.com/sunblaze-ucb/Orion" target="_blank"><i class="fab fa-github"></i>&nbsp; View Repo</a></p>
               </div>
             </div>
           </div>
         </div>
+        
+
         <div class="card mt-4">
           <div class="row align-items-center">
             <div class="col-lg-4 order-lg-last">
-              <div class="card-img" style="background-image: url('img/metaguard.png')">
+              <div class="card-img" style="background-image: url('img/libra.jpg')">
               </div>
             </div>
             <div class="col-lg-8">
               <div class="p-4">
-                <h4>MetaGuard: Going Incognito in the Metaverse</h4>
-                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Vivek Nair &middot; Gonzalo Munilla Garrido &middot; Dawn Song &nbsp;|&nbsp; https://doi.org/10.48550/arXiv.2208.05604</h6>
-                <p class="text-justify">We present the first known method of implementing an "incognito mode" for VR. Our technique leverages local ε-differential privacy to quantifiably obscure sensitive user data attributes, with a focus on intelligently adding noise when and where it is needed most to maximize privacy while minimizing usability impact&hellip;</p>
-                <p class="mb-0"><a class="btn btn-primary btn-sm" href="https://rdi.berkeley.edu/metaguard"><i class="fa fa-arrow-up-right-from-square"></i>&nbsp; Learn More</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://arxiv.org/abs/2208.05604" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://github.com/metaguard/metaguard" target="_blank"><i class="fab fa-github"></i>&nbsp; View Repo</a></p>
+                <h4>Libra: Succinct Zero-Knowledge Proofs with Optimal Prover Computation</h4>
+                <h6 class="text-secondary">2019 &nbsp;|&nbsp; Tiancheng Xie &middot; Jiaheng Zhang&middot; Yupeng Zhang &middot; Dawn Song &nbsp;|&nbsp; https://eprint.iacr.org/2019/317</h6>
+                <p class="text-justify">We present Libra, the first zero-knowledge proof system that has both optimal prover time and succinct proof size/verification time. In addition Libra features an one-time trusted setup that depends only on the size of the input to the circuit and not on the circuit logic. Underlying Libra is a new linear-time algorithm for the prover of the interactive proof protocol by Goldwasser, Kalai and Rothblum (also known as GKR protocol), as well as an efficient approach to turn the GKR protocol to zero-knowledge using small masking polynomials. Our implementation shows that it takes 200 seconds to generate a proof for constructing a SHA2-based Merkle tree root on 256 leaves, outperforming all existing zero-knowledge proof systems.&hellip;</p>
+                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2019/317" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://github.com/sunblaze-ucb/Libra" target="_blank"><i class="fab fa-github"></i>&nbsp; View Repo</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <div class="card-img" style="background-image: url('img/virgo.jpg')">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="p-4">
+                <h4>Virgo: Transparent Polynomial Delegation and Its Applications to Zero Knowledge Proof</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tiancheng Xie &middot; Yupeng Zhang &middot; Dawn Song &nbsp;|&nbsp; https://eprint.iacr.org/2019/1482</h6>
+                <p class="text-justify">We present a new succinct zero knowledge argument scheme for layered arithmetic circuits without trusted setup. The prover time is \(O(C + n \log{n})\) and we have succinct verifier. Our scheme only uses lightweight cryptographic primitives such as collision-resistant hash functions and is plausibly post-quantum secure. Experiments show that it only takes 53 seconds to generate a proof for a circuit computing a Merkle tree with 256 leaves, at least an order of magnitude faster than all other succinct zero knowledge argument schemes.&hellip;</p>
+                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2019/1482" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://github.com/sunblaze-ucb/Virgo" target="_blank"><i class="fab fa-github"></i>&nbsp; View Repo</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4 order-lg-last">
+              <div class="card-img" style="background-image: url('img/placeholder.png')">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="p-4">
+                <h4>Virgo++: Doubly Efficient Interactive Proofs for General Arithmetic Circuits with Linear Prover Time</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tianyi Liu &middot; Weijie Wang &middot; DawnSong &middot; Xiang Xie &middot; Yupeng Zhang &nbsp;|&nbsp; https://eprint.iacr.org/2020/1247.pdf</h6>
+                <p class="text-justify">We propose a new doubly efficient interactive proof protocol for general arithmetic circuits. The protocol generalizes the interactive proof for layered circuits proposed by Goldwasser, Kalai and Rothblum to arbitrary circuits, while preserving the optimal prover complexity that is strictly linear to the size of the circuits. We then construct a new zero knowledge argument scheme for general arithmetic circuits using our new interactive proof protocol together with polynomial commitments. Our experiments show that it only takes 0.3 seconds to generate the proof for a circuit with more than 600,000 gates, which is 13 times faster than the original interactive proof protocol on the corresponding layered circuit. Our implementation can take general arithmetic circuits directly, without transforming them to layered circuits with a high overhead on the size of the circuit.&hellip;</p>
+                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2020/1247.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      
     </div>
     <div class="bg-dark text-white text-center py-2">
       <div class="container">
