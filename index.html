@@ -35,6 +35,7 @@
                 ZKP Research
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="zkBridge/zkBridge.html">zkBridge</a></li>
                 <li><a class="dropdown-item" href="https://eprint.iacr.org/2022/1010">Orion</a></li>
                 <li><a class="dropdown-item" href="https://eprint.iacr.org/2019/317">Libra</a></li>
                 <li><hr class="dropdown-divider"></li>
@@ -242,9 +243,65 @@
             <div class="col-lg-8">
               <div class="p-4">
                 <h4>Virgo++: Doubly Efficient Interactive Proofs for General Arithmetic Circuits with Linear Prover Time</h4>
-                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tianyi Liu &middot; Weijie Wang &middot; DawnSong &middot; Xiang Xie &middot; Yupeng Zhang &nbsp;|&nbsp; https://eprint.iacr.org/2020/1247.pdf</h6>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tianyi Liu &middot; Weijie Wang &middot; Dawn Song &middot; Xiang Xie &middot; Yupeng Zhang &nbsp;|&nbsp; https://eprint.iacr.org/2020/1247.pdf</h6>
                 <p class="text-justify">We propose a new doubly efficient interactive proof protocol for general arithmetic circuits. The protocol generalizes the interactive proof for layered circuits proposed by Goldwasser, Kalai and Rothblum to arbitrary circuits, while preserving the optimal prover complexity that is strictly linear to the size of the circuits. We then construct a new zero knowledge argument scheme for general arithmetic circuits using our new interactive proof protocol together with polynomial commitments. Our experiments show that it only takes 0.3 seconds to generate the proof for a circuit with more than 600,000 gates, which is 13 times faster than the original interactive proof protocol on the corresponding layered circuit. Our implementation can take general arithmetic circuits directly, without transforming them to layered circuits with a high overhead on the size of the circuit.&hellip;</p>
                 <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2020/1247.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <div class="card-img" style="background-image: url('img/placeholder.png')">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="p-4">
+                <h4>Polynomial Commitment with a One-to-Many Prover and Applications</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tiancheng Xie &middot; Thang Hoang &middot; Elaine Shi &middot; Yupeng Zhang &nbsp;|&nbsp; https://www.usenix.org/system/files/sec22summer_zhang-jiaheng.pdf</h6>
+                <p class="text-justify">Verifiable Secret Sharing (VSS) is a foundational cryptographic primitive that serves as an essential building block in multi-party computation and decentralized blockchain applications. One of the most practical ways to construct VSS is through a polynomial commitment, where the dealer commits to a random polynomial whose 0-th coefficient encodes the secret to be shared, and proves the evaluation of the committed polynomial at a different point to each of N verifiers, i.e., the polynomial commitment is used in a “one-to-many” fashion. In this paper, we asymptotically improve polynomial commitment with one-to-many prover batching. We propose two novel schemes. First, we propose a scheme with optimal asymptotics in all dimensions in the trusted setup setting. Second, we propose a transparent scheme whose performance approximately matches the best-known scheme in the trusted setup setting. Our scheme in the trusted setup setting improves the proof size by 20x and the verifier time by 7.8x for \(2^{21}\) parties, with a small overhead on the prover time. Our transparent polynomial commitment removes the trusted setup and further improves the prover time by 2.3x.</p>
+                <a class="btn btn-secondary btn-sm" href="https://www.usenix.org/system/files/sec22summer_zhang-jiaheng.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4 order-lg-last">
+              <div class="card-img" style="background-image: url('img/placeholder.png')">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="p-4">
+                <h4>Hyperproofs: Aggregating and Maintaining Proofs in Vector Commitments</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Shravan Srinivasan &middot; Alexander Chepurnoy &middot; Charalampos Papamanthou &middot; Alin Tomescu &middot; Yupeng Zhang &nbsp;|&nbsp; https://eprint.iacr.org/2021/599</h6>
+                <p class="text-justify">"We present Hyperproofs, the first vector commitment (VC) scheme that is efficiently maintainable and aggregatable. Our proofs form a tree that can be efficiently maintained: updating all n proofs in the tree after a single leaf change only requires \(O(\log{n})\) time. Importantly, Hyperproofs are efficiently aggregatable, anywhere from 10x to 41x faster than SNARK-based aggregation of Merkle proofs. At the same time, an individual Hyperproof consists of only \(\log{n}\) algebraic hashes and an aggregation of $b$ such proofs is only \(O(\log{b\log{n}})\)-sized.
+
+                As another benefit over Merkle trees, Hyperproofs are homomorphic: digests (and proofs) for two vectors can be homomorphically combined into a digest (and proofs) for their sum.
+                </p>
+                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2021/599" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="card mt-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <div class="card-img" style="background-image: url('img/placeholder.png')">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="p-4">
+                <h4>ZKCPlus: Optimized Fair-exchange Protocol Supporting Practical and Flexible Data Exchange</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Yun Li &middot; Cun Ye &middot; Yuguang Hu &middot; Ivring Morpheus &middot; Yu Guo &middot; Chao Zhang &middot; Yupeng Zhang &middot; Zhipeng Sun &middot; Yiwen Lu &middot; Haodi Wang &nbsp;|&nbsp; https://netsec.ccert.edu.cn/files/papers/CCS21-ZKCPlus.pdf</h6>
+                <p class="text-justify">"Devising a fair-exchange protocol for digital goods has been an appealing line of research in the past decades. In this paper, we propose an improved solution ZKCPlus for practical and flexible fair exchange. ZKCPlus incorporates a new commit-and-prove non-interactive zero-knowledge (CP-NIZK) argument of knowledge under standard discrete logarithmic assumption, which is prover-efficient for data-parallel computations. With this argument we avoid the setup issues of ZKCP and reduce seller's proving overhead, more importantly enable the protocol to handle complicated data validations. We have implemented a prototype of ZKCPlus and built several applications atop it. Our CP-NIZK argument shows an order of magnitude higher proving efficiency than the zkSNARK adopted by ZKCP. We built a realistic application of trading trained CNN models. For a 3-layer CNN containing 8,620 parameters, it takes less than 1 second to prove and verify an inference computation, and also about 1 second to deliver the parameters, which is very promising for practical use.
+                </p>
+                <a class="btn btn-secondary btn-sm" href="https://netsec.ccert.edu.cn/files/papers/CCS21-ZKCPlus.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
               </div>
             </div>
           </div>
