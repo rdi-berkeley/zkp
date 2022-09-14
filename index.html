@@ -46,60 +46,7 @@
         </div>
       </div>
     </nav>
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="carousel-img" style="background-image: url('img/orion.jpg')"></div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text-shadow mb-0">Orion</h5>
-            <p class="mb-2 text-shadow">&ldquo;Scalable Polynomial Commitment and Zero-Knowledge Proof&rdquo;</p>
-            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2022/1010" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
-          </div>
-        </div>
-
-
-        <div class="carousel-item">
-          <div class="carousel-img" style="background-image: url('img/libra.jpg')"></div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text-shadow mb-0">Libra</h5>
-            <p class="mb-2 text-shadow">&ldquo;Efficient Prover for Layered Arithmetic Circuit&rdquo;</p>
-            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2019/317" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="carousel-img" style="background-image: url('img/virgo.jpg')"></div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text-shadow mb-0">Virgo</h5>
-            <p class="mb-2 text-shadow">&ldquo;Removing Trusted Setup for Libra&rdquo;</p>
-            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2019/1482" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="carousel-img" style="background-image: url('img/placeholder.png')"></div>
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="text-shadow mb-0">Virgo++</h5>
-            <p class="mb-2 text-shadow">&ldquo;Extending from Layered Circuit to Arbitrary Circuit&rdquo;</p>
-            <p><a class="btn btn-primary btn-sm" href="https://eprint.iacr.org/2020/1247.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a></p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    
     <div class="bg-dark text-white py-4">
       <div class="container text-center">
         <h5 class="mb-4"><i>Key researchers:</i></h5>
@@ -112,6 +59,17 @@
               <div class="col-lg-6 text-lg-start">
                 <h3 class="text-truncate">Dawn Song</h3>
                 <a class="btn btn-primary btn-sm mt-2" href="https://people.eecs.berkeley.edu/~dawnsong" target="_blank"><i class="fa fa-link"></i>&nbsp; Website</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row align-items-center">
+              <div class="col-lg-6 text-lg-end">
+                <img src="img/zyp.jpg" height="120" class="rounded-circle" />
+              </div>
+              <div class="col-lg-6 text-lg-start">
+                <h3 class="text-truncate">Yupeng Zhang</h3>
+                <a class="btn btn-primary btn-sm mt-2" href="http://people.tamu.edu/~zhangyp/" target="_blank"><i class="fa fa-link"></i>&nbsp; Website</a>
               </div>
             </div>
           </div>
@@ -199,23 +157,23 @@
           </div>
         </div>
         
-
         <div class="card mt-4">
           <div class="row align-items-center">
             <div class="col-lg-4 order-lg-last">
-              <div class="card-img" style="background-image: url('img/libra.jpg')">
+              <div class="card-img" style="background-image: url('img/v++.jpg')">
               </div>
             </div>
             <div class="col-lg-8">
               <div class="p-4">
-                <h4>Libra: Succinct Zero-Knowledge Proofs with Optimal Prover Computation</h4>
-                <h6 class="text-secondary">2019 &nbsp;|&nbsp; Tiancheng Xie &middot; Jiaheng Zhang&middot; Yupeng Zhang &middot; Dawn Song &nbsp;|&nbsp; https://eprint.iacr.org/2019/317</h6>
-                <p class="text-justify">We present Libra, the first zero-knowledge proof system that has both optimal prover time and succinct proof size/verification time. In addition Libra features an one-time trusted setup that depends only on the size of the input to the circuit and not on the circuit logic. Underlying Libra is a new linear-time algorithm for the prover of the interactive proof protocol by Goldwasser, Kalai and Rothblum (also known as GKR protocol), as well as an efficient approach to turn the GKR protocol to zero-knowledge using small masking polynomials. Our implementation shows that it takes 200 seconds to generate a proof for constructing a SHA2-based Merkle tree root on 256 leaves, outperforming all existing zero-knowledge proof systems.&hellip;</p>
-                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2019/317" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://github.com/sunblaze-ucb/Libra" target="_blank"><i class="fab fa-github"></i>&nbsp; View Repo</a></p>
+                <h4>Virgo++: Doubly Efficient Interactive Proofs for General Arithmetic Circuits with Linear Prover Time</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tianyi Liu &middot; Weijie Wang &middot; Dawn Song &middot; Xiang Xie &middot; Yupeng Zhang &nbsp;|&nbsp; https://eprint.iacr.org/2020/1247.pdf</h6>
+                <p class="text-justify">We propose a new doubly efficient interactive proof protocol for general arithmetic circuits. The protocol generalizes the interactive proof for layered circuits proposed by Goldwasser, Kalai and Rothblum to arbitrary circuits, while preserving the optimal prover complexity that is strictly linear to the size of the circuits. We then construct a new zero knowledge argument scheme for general arithmetic circuits using our new interactive proof protocol together with polynomial commitments. Our experiments show that it only takes 0.3 seconds to generate the proof for a circuit with more than 600,000 gates, which is 13 times faster than the original interactive proof protocol on the corresponding layered circuit. Our implementation can take general arithmetic circuits directly, without transforming them to layered circuits with a high overhead on the size of the circuit.&hellip;</p>
+                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2020/1247.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
               </div>
             </div>
           </div>
         </div>
+        
 
         <div class="card mt-4">
           <div class="row align-items-center">
@@ -234,23 +192,24 @@
           </div>
         </div>
 
+        
         <div class="card mt-4">
           <div class="row align-items-center">
             <div class="col-lg-4 order-lg-last">
-              <div class="card-img" style="background-image: url('img/v++.jpg')">
+              <div class="card-img" style="background-image: url('img/libra.jpg')">
               </div>
             </div>
             <div class="col-lg-8">
               <div class="p-4">
-                <h4>Virgo++: Doubly Efficient Interactive Proofs for General Arithmetic Circuits with Linear Prover Time</h4>
-                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tianyi Liu &middot; Weijie Wang &middot; Dawn Song &middot; Xiang Xie &middot; Yupeng Zhang &nbsp;|&nbsp; https://eprint.iacr.org/2020/1247.pdf</h6>
-                <p class="text-justify">We propose a new doubly efficient interactive proof protocol for general arithmetic circuits. The protocol generalizes the interactive proof for layered circuits proposed by Goldwasser, Kalai and Rothblum to arbitrary circuits, while preserving the optimal prover complexity that is strictly linear to the size of the circuits. We then construct a new zero knowledge argument scheme for general arithmetic circuits using our new interactive proof protocol together with polynomial commitments. Our experiments show that it only takes 0.3 seconds to generate the proof for a circuit with more than 600,000 gates, which is 13 times faster than the original interactive proof protocol on the corresponding layered circuit. Our implementation can take general arithmetic circuits directly, without transforming them to layered circuits with a high overhead on the size of the circuit.&hellip;</p>
-                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2020/1247.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
+                <h4>Libra: Succinct Zero-Knowledge Proofs with Optimal Prover Computation</h4>
+                <h6 class="text-secondary">2019 &nbsp;|&nbsp; Tiancheng Xie &middot; Jiaheng Zhang&middot; Yupeng Zhang &middot; Dawn Song &nbsp;|&nbsp; https://eprint.iacr.org/2019/317</h6>
+                <p class="text-justify">We present Libra, the first zero-knowledge proof system that has both optimal prover time and succinct proof size/verification time. In addition Libra features an one-time trusted setup that depends only on the size of the input to the circuit and not on the circuit logic. Underlying Libra is a new linear-time algorithm for the prover of the interactive proof protocol by Goldwasser, Kalai and Rothblum (also known as GKR protocol), as well as an efficient approach to turn the GKR protocol to zero-knowledge using small masking polynomials. Our implementation shows that it takes 200 seconds to generate a proof for constructing a SHA2-based Merkle tree root on 256 leaves, outperforming all existing zero-knowledge proof systems.&hellip;</p>
+                <a class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2019/317" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;<a class="btn btn-secondary btn-sm" href="https://github.com/sunblaze-ucb/Libra" target="_blank"><i class="fab fa-github"></i>&nbsp; View Repo</a></p>
               </div>
             </div>
           </div>
         </div>
-
+        
         <div class="card mt-4">
           <div class="row align-items-center">
             <div class="col-lg-4">
