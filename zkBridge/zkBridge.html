@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zero-Knowledge Proof Research | Berkeley RDI</title>
+    <meta name="description" content="Zero-Knowledge Proof research at the UC Berkeley Center for Responsible, Decentralized Intelligence">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="metaverse.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">ZKP Research @ <img src="img/rdi-sm.png" height="30"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="https://rdi.berkeley.edu">RDI Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://rdi.berkeley.edu/research">Research Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ZKP Research
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="zkBridge.html">zkBridge</a></li>
+                <li><a class="dropdown-item" href="https://eprint.iacr.org/2022/1010">Orion</a></li>
+                <li><a class="dropdown-item" href="https://eprint.iacr.org/2019/317">Libra</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item active" href="https://rdi.berkeley.edu/zkp">View All</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="bg-light py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <img src="img/zkbridge.jpg" class="w-100 rounded">
+          </div>
+          <div class="col-lg-7">
+            <h1 class="mt-3">zkBridge: Trustless Cross-chain Bridges Made Practical</h1>
+            <p class="text-secondary">2022 &nbsp;|&nbsp; Tiancheng Xie &middot; Jiaheng Zhang &middot; Zerui Cheng &middot; Fan Zhang &middot; Yupeng Zhang &middot; Yongzheng Jia &middot; Dan Boneh &middot; Dawn Song  </p>
+            <p class="text-justify">We present zkBridge, a trustless, permissionless, extensible, and universal cross-chain bridge, which leverages zk-SNARK to promptly provide the receiver blockchain with succinct non-interactive proofs of the latest information on other blockchains. It is the first-ever proof-based cross-chain bridge that doesn't invoke optimistic approaches, thus achieving cryptographic assurance of security without any external trust assumptions. The advanced properties of zkBridge are realized through our highly-optimized underlying zk-SNARK protocol. To achieve prompt proof generation, we first introduce deVirgo, a distributed version of Virgo proof system,
+which combines distributed sumcheck and distributed polynomial commitment, and achieves optimal parallelism. It is more than 100x faster than Virgo for the workload in zkBridge. And for affordable on-chain verification, we use Groth16 to recursively prove that the previously generated proof by deVirgo indeed proves a certain claim. In this way, an increase of \(25\%\) in proof generation time lowers the verification gas cost from around \(6*10^8\) to \(2*10^5\), which is acceptable for a cross-chain bridge. Through the coordination of deVirgo and Groth16, we achieve a perfect balance between efficiency and cost. We have already implemented zkBridge for some directions, and we welcome anyone to work on more directions with us and contribute to the zkBridge ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="bg-dark text-white">
+<div class="container py-5 text-center">
+      <h1>Our Advantages Compared with Other Cross-chain Bridges</h1>
+      <br/><br/>
+
+<p class="mb-5 w-75 m-auto">Cross-chain bridges enable secure and efficient communication between two blockchains. <br/>As it has been widely acknowledged that the blockchain ecosystem will get into a multi-chain future.<br/> Thus cross-chain bridges are extremely critical for multi-chain interoperability.</p>
+<p style="text-align: center;"><img src="img/brg.jpg" class="w-50 rounded"></p>
+<br/>
+<br/>
+
+
+<p class="mb-5 w-75 m-auto">There are quite a few cross-chain bridge projects in the wild today.
+<br/>
+However, most of them suffer from either inefficiency or poor security.
+<br/>
+In the following chart, we present a summary of the representatives.
+</p>
+<p style="text-align: center;"><img src="img/bridges.jpg" class="w-50 rounded"></p>
+<br/>
+<br/>
+<p class="mb-5 w-75 m-auto">Compared with existing cross-chain bridge projects, the overall merits of zkBridge can be summarized as follows:</p>
+
+<div class="row align-items-center">
+          <h3 class="mb-3">1. Trustless</h3>
+          <p class="mb-3">zk-SNARK provides the credentials of a valid block header on other blockchains, <br/>and thus we don't need to introduce extra trust assumptions such as a trusted third party or a central committee. <br/> <br/> As long as the security of both the connected blockchains themselves and the underlying light-client protocol is guaranteed, <br/>and there's at least one honest node in the block header relay network, zkBridge is secure. <br/><br/> </p>
+      </div>
+<br/> 
+
+<div class="row align-items-center">
+          <h3 class="mb-3">2. Permissionless and Decentralized</h3>
+          <p class="mb-3"> There's no minimum threshold for anyone to enter the block header relay network, <br/> and thus any node can freely join the network to relay the block headers, generate proofs, and claim the rewards.<br/><br/></p>
+          </div>
+<br/> 
+
+<div class="row align-items-center">
+          <h3 class="mb-3">3. Extensible</h3>
+          <p class="mb-3"> zkBridge also allows plausible extensibility, <br/>in that users can invoke the updater contract to retrieve certain block headers, <br/>and perform their application-specific verification based on the block headers, <br/>resulting in more freedom and wider usage on users' side.<br/><br/></p>
+      </div>
+<br/> 
+
+<div class="row align-items-center">
+          <h3 class="mb-3">4. Universal</h3>
+          <p class="mb-3"> Compared with some bridge projects that are restricted to certain blockchains, <br/>the block header relay network and the underlying proof scheme in zkBridge <br/> can connect almost any two blockchains together without triggering high cost, making it universal. <br/><br/></p>
+      </div>
+<br/> 
+
+<div class="row align-items-center">
+          <h3 class="mb-3">5. Fast and Flexible Transaction Processing</h3>
+          <p class="mb-3">With our highly optimized recursive proof scheme,<br/> block headers can be relayed within a plausibly short time (usually tens of seconds for proof generation), <br/> and the relayed information can be quickly finalized as long as the proof passes the verification. <br/> <br/> It's a giant leap compared with other proof-based cross-chain bridges which usually suffer from long latency due to the challenge window.<br/><br/></p>      </div>
+<br/> 
+
+      
+</div>
+ </div>
+
+
+    
+
+    <div class="container py-5 text-center">
+      <h1>Design Rationale and the Underlying Proof System</h1>
+      <p class="mb-5 w-75 m-auto">In the following, we introduce the design rationale and our highly optimized proof system of zkBridge in more detail.</p>
+
+      <div class="row align-items-center">
+        <div class="col-md-4 py-5 py-md-0">
+          <img src="img/zkbridge_algo.jpg" class="w-100" />
+        </div>
+        <div class="col-md-8 ps-md-5 text-md-start">
+          <h4 class="mb-3">zkBridge Protocol</h4>
+          <p class="mb-3">Concretely, zkBridge consists of the following components: a block header relay network and an updater contract. In the block header relay network, relayers retrieve the block headers from the sender blockchain C1, generate proofs of validity of the block headers, and send the headers along with the proofs to the updater contract which is set up on the receiver blockchain C2. Whereas for the updater contract, the corresponding block headers of C1 are stored once the associated proofs pass the verification. Furthermore, the updater contract also maintains a light-client state. Once a new block header is added, the contract renews the light-client state just like other light clients on C1, and updates the current main chain of C1. The updater contract also exposes a function to the bridge users, through which a user on C2 can obtain the block header of a given height on C1. After getting the block header information, the users can do more verification (such as a specific transaction) and build their own applications.</p>
+        </div>
+      </div>
+      <div class="row align-items-center mt-5">
+        <div class="col-md-4 py-5 py-md-0 order-md-last">
+          <img src="img/zkbridge_proof.jpg" class="w-100" />
+        </div>
+        <div class="col-md-8 pe-md-5 text-md-start">
+          <h4>deVirgo and Recursive Proof</h4>
+          <p>To make the underlying zk-SNARK system compatible with on-chain usage, both quick proof generation and reasonable on-chain proof verification cost are required. And we use a 2-layer recursive proof system to make both properties satisfied. In the first layer, we present deVirgo, a distributed version of Virgo proof system, which combines distributed sumcheck and distributed polynomial commitment, and achieves optimal parallelism, through which the proof generation phase is much more accelerated by running more distributed machines. However, the verification cost of deVirgo proof on-chain is still too high to be put into practice, and thus we apply a recursive second layer to address the issue. In the second layer, we use Groth16 to prove that the previously generated proof by deVirgo indeed proves a certain claim. Through the 2-layer recursive proof scheme, the proof generation time is increased by around 25% due to additional Groth16 proof generation, but the verification gas cost is reduced from an estimation of 6*10^8 to around 2*10^5, which becomes reasonable and acceptable. In this way, we achieve a perfect balance between timely proof generation and low verification cost. As shown in the following table, the concrete experiment results show that plausible improvements in both proof time and on-chain verification cost are achieved through the optimization.</p>
+        </div>
+      </div>
+      <div class="row align-items-center mt-5 mb-5">        <div class="col-md-8 ps-md-5 text-md-start">
+          <h4>Future of zkBridge</h4>
+          <p>We have already implemented zkBridge for some directions. Aiming to make zkBridge a community project, for those who are interested in helping build the zkBridge ecosystem, they are welcome to join us (contact information will be available soon) and we'll follow up to contact you for later steps. </p>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+
+      
+    </div>
+    <div class="bg-dark text-white text-center py-2">
+      <div class="container">
+        <p class="m-0">Copyright &copy;2022 UC Regents &nbsp;|&nbsp; Email us at <a href="mailto:rdi@berkeley.edu">rdi@berkeley.edu</a>.</p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
+

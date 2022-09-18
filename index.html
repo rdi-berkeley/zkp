@@ -127,7 +127,7 @@
             <h4>Surprise! The metaverse is going to suck for privacy</h4>
             <figure>
               <blockquote class="blockquote">
-                <p>&ldquo;Through a 30-person study of VR usage, the researchers ‚Äì Vivek Nair (UCB), Gonzalo Munilla Garrido (TUM), and Dawn Song (UCB) ‚Äì created a framework for assessing and analyzing potential privacy threats.&rdquo;</p>
+                <p>&ldquo;Through a 30-person study of VR usage, the researchers ‚Ä?Vivek Nair (UCB), Gonzalo Munilla Garrido (TUM), and Dawn Song (UCB) ‚Ä?created a framework for assessing and analyzing potential privacy threats.&rdquo;</p>
               </blockquote>
               <figcaption class="blockquote-footer">
                 Thomas Claburn in <cite title="Source Title">The Register</cite> &middot; <a href="https://www.theregister.com/2022/07/29/metaverse_privacy_study/" target="_blank">Read Article</a>
@@ -141,13 +141,34 @@
 
     <div class="bg-secondary py-5">
       <div class="container">
-        <div class="card">
+
+            
+        <div class="card mt-4">
+          <div class="row align-items-center">
+            <div class="col-lg-4 order-lg-last">
+              <div class="card-img" style="background-image: url('img/zkbridge.jpg')">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="p-4">
+                <h4>zkBridge: Trustless Cross-chain Bridges Made Practical</h4>
+                <h6 class="text-secondary">2022 &nbsp;|&nbsp; Tiancheng Xie &middot; Jiaheng Zhang &middot; Zerui Cheng &middot; Fan Zhang &middot; Yupeng Zhang &middot; Yongzheng Jia &middot; Dan Boneh &middot; Dawn Song </h6>
+                <p class="text-justify">We present zkBridge, a trustless, permissionless, extensible, and universal cross-chain bridge, which leverages zk-SNARK to promptly provide the receiver blockchain with succinct non-interactive proofs of the latest information on other blockchains. It is the first-ever proof-based cross-chain bridge that doesn't invoke optimistic approaches, thus achieving cryptographic assurance of security without any external trust assumptions. The advanced properties of zkBridge are realized through our highly-optimized underlying zk-SNARK protocol. To achieve prompt proof generation, we first introduce deVirgo, a distributed version of Virgo proof system,
+which combines distributed sumcheck and distributed polynomial commitment, and achieves optimal parallelism. It is more than 100x faster than Virgo for the workload in zkBridge. And for affordable on-chain verification, we use Groth16 to recursively prove that the previously generated proof by deVirgo indeed proves a certain claim. In this way, an increase of \(25\%\) in proof generation time lowers the verification gas cost from around \(6*10^8\) to \(2*10^5\), which is acceptable for a cross-chain bridge. Through the coordination of deVirgo and Groth16, we achieve a perfect balance between efficiency and cost. We have already implemented zkBridge for some directions, and we welcome anyone to work on more directions with us and contribute to the zkBridge ecosystem.</p>
+<p class="mb-0"><a class="btn btn-primary btn-sm" href="https://rdi.berkeley.edu/zkp/zkBridge/zkBridge.html"><i class="fa fa-arrow-up-right-from-square"></i>&nbsp; Learn More</a>&nbsp;</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="card mt-4">
           <div class="row align-items-center">
             <div class="col-lg-4">
               <div class="card-img" style="background-image: url('img/orion.jpg')">
               </div>
             </div>
-            <div class="col-lg-8">
+		<div class="col-lg-8">
               <div class="p-4">
                 <h4>Orion: Zero Knowledge Proof with Linear Prover Time</h4>
                 <h6 class="text-secondary">2022 &nbsp;|&nbsp; Tiancheng Xie &middot; Yupeng Zhang &middot; Dawn Song &nbsp;|&nbsp; https://eprint.iacr.org/2022/1010</h6>
@@ -221,7 +242,7 @@
               <div class="p-4">
                 <h4>Polynomial Commitment with a One-to-Many Prover and Applications</h4>
                 <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tiancheng Xie &middot; Thang Hoang &middot; Elaine Shi &middot; Yupeng Zhang &nbsp;|&nbsp; https://www.usenix.org/system/files/sec22summer_zhang-jiaheng.pdf</h6>
-                <p class="text-justify">Verifiable Secret Sharing (VSS) is a foundational cryptographic primitive that serves as an essential building block in multi-party computation and decentralized blockchain applications. One of the most practical ways to construct VSS is through a polynomial commitment, where the dealer commits to a random polynomial whose 0-th coefficient encodes the secret to be shared, and proves the evaluation of the committed polynomial at a different point to each of N verifiers, i.e., the polynomial commitment is used in a ‚Äúone-to-many‚Äù fashion. In this paper, we asymptotically improve polynomial commitment with one-to-many prover batching. We propose two novel schemes. First, we propose a scheme with optimal asymptotics in all dimensions in the trusted setup setting. Second, we propose a transparent scheme whose performance approximately matches the best-known scheme in the trusted setup setting. Our scheme in the trusted setup setting improves the proof size by 20x and the verifier time by 7.8x for \(2^{21}\) parties, with a small overhead on the prover time. Our transparent polynomial commitment removes the trusted setup and further improves the prover time by 2.3x.</p>
+                <p class="text-justify">Verifiable Secret Sharing (VSS) is a foundational cryptographic primitive that serves as an essential building block in multi-party computation and decentralized blockchain applications. One of the most practical ways to construct VSS is through a polynomial commitment, where the dealer commits to a random polynomial whose 0-th coefficient encodes the secret to be shared, and proves the evaluation of the committed polynomial at a different point to each of N verifiers, i.e., the polynomial commitment is used in a ‚Äúone-to-many‚Ä?fashion. In this paper, we asymptotically improve polynomial commitment with one-to-many prover batching. We propose two novel schemes. First, we propose a scheme with optimal asymptotics in all dimensions in the trusted setup setting. Second, we propose a transparent scheme whose performance approximately matches the best-known scheme in the trusted setup setting. Our scheme in the trusted setup setting improves the proof size by 20x and the verifier time by 7.8x for \(2^{21}\) parties, with a small overhead on the prover time. Our transparent polynomial commitment removes the trusted setup and further improves the prover time by 2.3x.</p>
                 <a class="btn btn-secondary btn-sm" href="https://www.usenix.org/system/files/sec22summer_zhang-jiaheng.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
               </div>
             </div>
