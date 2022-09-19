@@ -68,7 +68,7 @@ which combines distributed sumcheck and distributed polynomial commitment, and a
       <h1>Our Advantages Compared with Other Cross-chain Bridges</h1>
       <br/><br/>
 
-<p class="mb-5 w-75 m-auto">Cross-chain bridges enable secure and efficient communication between two blockchains. <br/>As it has been widely acknowledged that the blockchain ecosystem will get into a multi-chain future.<br/> Thus cross-chain bridges are extremely critical for multi-chain interoperability.</p>
+<p class="mb-5 w-75 m-auto">Cross-chain bridges enable secure and efficient communication between two blockchains. <br/>It has been widely acknowledged that the blockchain ecosystem will get into a multi-chain future.<br/> Thus cross-chain bridges are extremely critical for multi-chain interoperability.</p>
 <p style="text-align: center;"><img src="img/brg.jpg" class="w-50 rounded"></p>
 <br/>
 <br/>
@@ -78,9 +78,8 @@ which combines distributed sumcheck and distributed polynomial commitment, and a
 <br/>
 However, most of them suffer from either inefficiency or poor security.
 <br/>
-In the following chart, we present a summary of the representatives.
-</p>
-<p style="text-align: center;"><img src="img/bridges.jpg" class="w-50 rounded"></p>
+Till the time of writing (Sep 2022), more than $1 billion has been stolen by attackers from bridges.
+
 <br/>
 <br/>
 <p class="mb-5 w-75 m-auto">Compared with existing cross-chain bridge projects, the overall merits of zkBridge can be summarized as follows:</p>
@@ -99,7 +98,7 @@ In the following chart, we present a summary of the representatives.
 
 <div class="row align-items-center">
           <h3 class="mb-3">3. Extensible</h3>
-          <p class="mb-3"> zkBridge also allows plausible extensibility, <br/>in that users can invoke the updater contract to retrieve certain block headers, <br/>and perform their application-specific verification based on the block headers, <br/>resulting in more freedom and wider usage on users' side.<br/><br/></p>
+          <p class="mb-3"> zkBridge also allows full extensibility, <br/>in that users can invoke the updater contract to retrieve certain block headers, <br/>and perform their application-specific verification based on the block headers, <br/>resulting in more freedom and wider usage on users' side.<br/><br/></p>
       </div>
 <br/> 
 
@@ -111,7 +110,7 @@ In the following chart, we present a summary of the representatives.
 
 <div class="row align-items-center">
           <h3 class="mb-3">5. Fast and Flexible Transaction Processing</h3>
-          <p class="mb-3">With our highly optimized recursive proof scheme,<br/> block headers can be relayed within a plausibly short time (usually tens of seconds for proof generation), <br/> and the relayed information can be quickly finalized as long as the proof passes the verification. <br/> <br/> It's a giant leap compared with other proof-based cross-chain bridges which usually suffer from long latency due to the challenge window.<br/><br/></p>      </div>
+          <p class="mb-3">With our highly optimized recursive proof scheme,<br/> block headers can be relayed within a short time (usually tens of seconds for proof generation), <br/> and the relayed information can be quickly finalized as long as the proof passes the verification. <br/> <br/><br/><br/> In summary, our completely new design is a huge leap towards building a secure, trustless foundation for blockchain interoperability.<br/><br/></p>      </div>
 <br/> 
 
       
@@ -143,16 +142,40 @@ In the following chart, we present a summary of the representatives.
           <p>To make the underlying zk-SNARK system compatible with on-chain usage, both quick proof generation and reasonable on-chain proof verification cost are required. And we use a 2-layer recursive proof system to make both properties satisfied. In the first layer, we present deVirgo, a distributed version of Virgo proof system, which combines distributed sumcheck and distributed polynomial commitment, and achieves optimal parallelism, through which the proof generation phase is much more accelerated by running more distributed machines. However, the verification cost of deVirgo proof on-chain is still too high to be put into practice, and thus we apply a recursive second layer to address the issue. In the second layer, we use Groth16 to prove that the previously generated proof by deVirgo indeed proves a certain claim. Through the 2-layer recursive proof scheme, the proof generation time is increased by around 25% due to additional Groth16 proof generation, but the verification gas cost is reduced from an estimation of 6*10^8 to around 2*10^5, which becomes reasonable and acceptable. In this way, we achieve a perfect balance between timely proof generation and low verification cost. As shown in the following table, the concrete experiment results show that plausible improvements in both proof time and on-chain verification cost are achieved through the optimization.</p>
         </div>
       </div>
-      <div class="row align-items-center mt-5 mb-5">        <div class="col-md-8 ps-md-5 text-md-start">
-          <h4>Future of zkBridge</h4>
-          <p>We have already implemented zkBridge for some directions. Aiming to make zkBridge a community project, for those who are interested in helping build the zkBridge ecosystem, they are welcome to join us (contact information will be available soon) and we'll follow up to contact you for later steps. </p>
-        </div>
-      </div>
-    </div>
-      </div>
-    </div>
 
-      
+<br/><br/>
+</div>
+      </div>
+
+
+<div class="bg-dark text-white">
+<div class="container py-5 text-center">
+
+
+	<h4>Acknowledgments</h4>
+          <p>We would thank the following organizations for their support in this work. <br/> </p>
+<h6>the National Science Foundation (NSF)<br/></h6>
+<h6>the Center for Responsible, Decentralized Intelligence at Berkeley (Berkeley RDI)<br/></h6>
+<h6>the Center for Long-Term Cybersecurity (CLTC)<br/></h6>
+<h6>the Simons Foundation<br/></h6>
+<h6>NTT Research<br/></h6>
+<br/> 
+
+<p>Any opinions, findings, conclusions, or recommendations expressed in this material <br/>
+are those of the author(s) and do not necessarily reflect the views of these institutes.</p>
+<br/><br/>
+
+          <h4>Future of zkBridge</h4>
+          <p>We have already implemented zkBridge for some directions. <br/>Aiming to make zkBridge a community project, <br/>those who are interested in helping build the zkBridge ecosystem are welcome to join us, <br/>
+and we'll follow up to contact you for later steps. <br/><br/>
+
+The contact information will be available here soon.</p>
+
+
+        </div>
+   </div>    
+</div>
+
     </div>
     <div class="bg-dark text-white text-center py-2">
       <div class="container">
