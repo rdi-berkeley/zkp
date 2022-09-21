@@ -54,9 +54,8 @@
           </div>
           <div class="col-lg-7">
             <h1 class="mt-3">zkBridge: Trustless Cross-chain Bridges Made Practical</h1>
-            <p class="text-secondary">2022 &nbsp;|&nbsp; Tiancheng Xie &middot; Jiaheng Zhang &middot; Zerui Cheng &middot; Fan Zhang &middot; Yupeng Zhang &middot; Yongzheng Jia &middot; Dan Boneh &middot; Dawn Song &nbsp;|&nbsp; To appear in ACM CCS 2022  </p>
-            <p class="text-justify">We present zkBridge, a trustless, permissionless, extensible, and universal cross-chain bridge, which leverages zk-SNARK to promptly provide the receiver blockchain with succinct non-interactive proofs of the latest information on other blockchains. It is the first-ever proof-based cross-chain bridge that doesn't invoke optimistic approaches, thus achieving cryptographic assurance of security without any external trust assumptions. The advanced properties of zkBridge are realized through our highly-optimized underlying zk-SNARK protocol. To achieve prompt proof generation, we first introduce deVirgo, a distributed version of Virgo proof system,
-which combines distributed sumcheck and distributed polynomial commitment, and achieves optimal parallelism. It is more than 100x faster than Virgo for the workload in zkBridge. And for affordable on-chain verification, we use Groth16 to recursively prove that the previously generated proof by deVirgo indeed proves a certain claim. In this way, an increase of \(25\%\) in proof generation time lowers the verification gas cost from around \(6*10^8\) to \(2*10^5\), which is acceptable for a cross-chain bridge. Through the coordination of deVirgo and Groth16, we achieve a perfect balance between efficiency and cost. We have already implemented zkBridge for some directions, and we welcome anyone to work on more directions with us and contribute to the zkBridge ecosystem.</p>
+            <p class="text-secondary">2022 &nbsp;|&nbsp; Tiancheng Xie &middot; Jiaheng Zhang &middot; Zerui Cheng &middot; Fan Zhang &middot; Yupeng Zhang &middot; Yongzheng Jia &middot; Dan Boneh &middot; Dawn Song &nbsp;|&nbsp; <a href="https://drive.google.com/file/d/1t7LX42YcA39G7dgKFxSORkeSkpcanQg8/view?usp=sharing">Link to Paper</a> &nbsp;|&nbsp; To appear in ACM CCS 2022  </p>
+            <p class="text-justify">We present zkBridge, a trustless, permissionless, extensible, universal, and efficient cross-chain bridge that leverages zk-SNARKs for block header relay, where non-interactive proofs help achieve cryptographic assurance of security without any external trust assumptions such as a central committee, and succinctness helps significantly reduce on-chain verification cost. In the underlying proof protocol, we first propose deVirgo, a novel succinct proof protocol that is orders-of-magnitude faster than existing solutions for the workload in zkBridge, and further apply Groth16 for recursive proof that lowers the on-chain verification cost. With a modular design, zkBridge enables a few useful capabilities, including message passing, token transferring, and other computational logic operating on state changes from different chains. We have already implemented zkBridge between certain chains and evaluated its end-to-end performance, and we encourage the community to join us to extend zkBridge to other chains by <a href="https://forms.gle/WBx25gBoMZjXsMTJ8 ">filling in the form</a>.</p>
           </div>
         </div>
       </div>
@@ -74,7 +73,7 @@ which combines distributed sumcheck and distributed polynomial commitment, and a
 <br/>
 
 
-<p class="mb-5 w-75 m-auto">There are quite a few cross-chain bridge projects in the wild today.
+<p class="mb-5 w-75 m-auto">There are quite a few cross-chain bridge projects deployed today.
 <br/>
 However, most of them suffer from either inefficiency or poor security.
 <br/>
@@ -82,35 +81,35 @@ Till the time of writing (Sep 2022), more than $1 billion has been stolen by att
 
 <br/>
 <br/>
-<p class="mb-5 w-75 m-auto">Compared with existing cross-chain bridge projects, the overall merits of zkBridge can be summarized as follows:</p>
+<p class="mb-5 w-75 m-auto">Compared with existing cross-chain bridge projects, the overall advantages of zkBridge can be summarized as follows:</p>
 
 <div class="row align-items-center">
-          <h3 class="mb-3">1. Trustless</h3>
-          <p class="mb-3">zk-SNARK provides the credentials of a valid block header on other blockchains, <br/>and thus we don't need to introduce extra trust assumptions such as a trusted third party or a central committee. <br/> <br/> As long as the security of both the connected blockchains themselves and the underlying light-client protocol is guaranteed, <br/>and there's at least one honest node in the block header relay network, zkBridge is secure. <br/><br/> </p>
+          <h3 class="mb-3">1. Trustless and Secure</h3>
+          <p class="mb-3">The proofs of a valid block header on remote blockchains are provided by zk-SNARKs, <br/>and thus no extra trust assumptions are introduced.<br/> As long as the security of both the connected blockchains themselves and the underlying light-client protocol is guaranteed,<br/> and there is at least one honest node in the block header relay network, zkBridge is secure. <br/>It implies that zkBridge achieves the best possible security. <br/><br/> </p>
       </div>
 <br/> 
 
 <div class="row align-items-center">
           <h3 class="mb-3">2. Permissionless and Decentralized</h3>
-          <p class="mb-3"> There's no minimum threshold for anyone to enter the block header relay network, <br/> and thus any node can freely join the network to relay the block headers, generate proofs, and claim the rewards.<br/><br/></p>
+          <p class="mb-3"> Any node can freely join the network to relay the block headers, generate proofs, and claim the rewards. <br/>  Due to the elimination of the commonly-used central or Proof-of-Stake style committee for block header validation, <br/> zkBridge also enjoys better decentralization.<br/><br/></p>
           </div>
 <br/> 
 
 <div class="row align-items-center">
           <h3 class="mb-3">3. Extensible</h3>
-          <p class="mb-3"> zkBridge also allows full extensibility, <br/>in that users can invoke the updater contract to retrieve certain block headers, <br/>and perform their application-specific verification based on the block headers, <br/>resulting in more freedom and wider usage on users' side.<br/><br/></p>
+          <p class="mb-3"> zkBridge allows maximum extensibility, <br/> in that applications can invoke the updater contract to retrieve verified block headers, <br/> and then perform their application-specific verification and functionality in addition for wider usage.<br/>  (e.g., verifying a transaction through auxiliary Merkle proof) <br/>  By separating the bridge from application-specific logic, <br/> zkBridge makes it easy to enable additional applications on top of the bridge.<br/><br/></p>
       </div>
 <br/> 
 
 <div class="row align-items-center">
           <h3 class="mb-3">4. Universal</h3>
-          <p class="mb-3"> Compared with some bridge projects that are restricted to certain blockchains, <br/>the block header relay network and the underlying proof scheme in zkBridge <br/> can connect almost any two blockchains together without triggering high cost, making it universal. <br/><br/></p>
+          <p class="mb-3"> The block header relay network and the underlying proof scheme in zkBridge can connect <br/>  almost any two blockchains together without triggering high cost,<br/>   making the cross-chain bridge universal. <br/><br/></p>
       </div>
 <br/> 
 
 <div class="row align-items-center">
-          <h3 class="mb-3">5. Fast and Flexible Transaction Processing</h3>
-          <p class="mb-3">With our highly optimized recursive proof scheme,<br/> block headers can be relayed within a short time (usually tens of seconds for proof generation), <br/> and the relayed information can be quickly finalized as long as the proof passes the verification. <br/> <br/><br/><br/> In summary, our completely new design is a huge leap towards building a secure, trustless foundation for blockchain interoperability.<br/><br/></p>      </div>
+          <h3 class="mb-3">5. Efficient</h3>
+          <p class="mb-3">With our highly optimized recursive proof scheme,<br/>  block headers can be relayed within a short time (usually tens of seconds for proof generation), <br/> and the relayed information can be quickly finalized as long as the proof passes the verification, <br/> thus supporting fast and flexible transaction processing. <br/> <br/><br/><br/> In summary, our completely new design is a huge leap towards building a secure, trustless foundation for blockchain interoperability.<br/><br/></p>      </div>
 <br/> 
 
       
@@ -130,7 +129,7 @@ Till the time of writing (Sep 2022), more than $1 billion has been stolen by att
         </div>
         <div class="col-md-8 ps-md-5 text-md-start">
           <h4 class="mb-3">zkBridge Protocol</h4>
-          <p class="mb-3">Concretely, zkBridge consists of the following components: a block header relay network and an updater contract. In the block header relay network, relayers retrieve the block headers from the sender blockchain C1, generate proofs of validity of the block headers, and send the headers along with the proofs to the updater contract which is set up on the receiver blockchain C2. Whereas for the updater contract, the corresponding block headers of C1 are stored once the associated proofs pass the verification. Furthermore, the updater contract also maintains a light-client state. Once a new block header is added, the contract renews the light-client state just like other light clients on C1, and updates the current main chain of C1. The updater contract also exposes a function to the bridge users, through which a user on C2 can obtain the block header of a given height on C1. After getting the block header information, the users can do more verification (such as a specific transaction) and build their own applications.</p>
+          <p class="mb-3">Concretely, zkBridge consists of the following components: a block header relay network and an updater contract. In the block header relay network, relayers retrieve the block headers from the sender blockchain C1, generate proofs of validity of the block headers, and send the headers along with the proofs to the updater contract which is set up on the receiver blockchain C2.  For the updater contract, the corresponding block headers of C1 are stored once the associated proofs pass the verification. Furthermore, the updater contract also maintains a light-client state. Once a new block header is added, the contract renews the light-client state just like other light clients on C1, and updates the current main chain of C1. The updater contract also exposes a function to applications, through which an application on C2 can obtain the block header of a given height on C1. After getting the block header information, the application can do more verification (such as a specific transaction) and build their own applications.</p>
         </div>
       </div>
       <div class="row align-items-center mt-5">
@@ -139,7 +138,7 @@ Till the time of writing (Sep 2022), more than $1 billion has been stolen by att
         </div>
         <div class="col-md-8 pe-md-5 text-md-start">
           <h4>deVirgo and Recursive Proof</h4>
-          <p>To make the underlying zk-SNARK system compatible with on-chain usage, both quick proof generation and reasonable on-chain proof verification cost are required. And we use a 2-layer recursive proof system to make both properties satisfied. In the first layer, we present deVirgo, a distributed version of Virgo proof system, which combines distributed sumcheck and distributed polynomial commitment, and achieves optimal parallelism, through which the proof generation phase is much more accelerated by running more distributed machines. However, the verification cost of deVirgo proof on-chain is still too high to be put into practice, and thus we apply a recursive second layer to address the issue. In the second layer, we use Groth16 to prove that the previously generated proof by deVirgo indeed proves a certain claim. Through the 2-layer recursive proof scheme, the proof generation time is increased by around 25% due to additional Groth16 proof generation, but the verification gas cost is reduced from an estimation of 6*10^8 to around 2*10^5, which becomes reasonable and acceptable. In this way, we achieve a perfect balance between timely proof generation and low verification cost. As shown in the following table, the concrete experiment results show that improvements in both proof time and on-chain verification cost are achieved through the optimization.</p>
+          <p>To make the underlying zk-SNARK system compatible with on-chain usage, both fast proof generation and low on-chain proof verification cost are required. We use a 2-layer recursive proof system to satisfy both properties. In the first layer, we present deVirgo, a distributed version of the Virgo proof system. deVirgo combines distributed sumcheck and distributed polynomial commitment to achieve optimal parallelism, and is able to accelerate the proof generation by orders of magnitude when running on distributed machines. However, the verification cost of deVirgo proof on-chain is still too high to be put into practice, and thus we apply a recursive second layer to address the issue. In the second layer, we use Groth16 to prove that the previously generated proof by deVirgo indeed proves the corresponding block headers, which significantly reduces on-chain verification gas cost from ~80M to ~221K. Through the 2-layer recursive proof scheme, we perfectly achieve fast proof generation and low verification cost at the same time.</p>
         </div>
       </div>
 
@@ -154,8 +153,7 @@ Till the time of writing (Sep 2022), more than $1 billion has been stolen by att
 
 	
           <h4>Future of zkBridge</h4>
-          <p>We have already implemented zkBridge for some directions. <br/>Aiming to make zkBridge a community project, <br/>those who are interested in helping build the zkBridge ecosystem are welcome to join us, <br/>please fill in the form <a href="https://forms.gle/WBx25gBoMZjXsMTJ8 ">Link to Google Form</a>, <br/>
-and we'll follow up to contact you for later steps. <br/><br/>
+          <p>We have already implemented zkBridge between certain chains. <br/>Given the trustless and full decentralization nature of zkBridge, <br/>we encourage community members to join us to extend zkBridge to other chains, <br/> and make it a universal, secure foundation for multi-chain interoperability.  <br/>If you are interested in contributing, <a href="https://forms.gle/WBx25gBoMZjXsMTJ8 ">please fill in the form</a>, <br/> and we'll follow up to contact you for later steps. <br/><br/>
 
 </p>
 
