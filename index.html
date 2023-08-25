@@ -35,6 +35,7 @@
                 ZKP Research
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Pianist/pianist.html">Pianist</a></li>
                 <li><a class="dropdown-item" href="zkBridge/zkBridge.html">zkBridge</a></li>
                 <li><a class="dropdown-item" href="https://eprint.iacr.org/2022/1010">Orion</a></li>
                 <li><a class="dropdown-item" href="https://eprint.iacr.org/2019/317">Libra</a></li>
@@ -127,7 +128,7 @@
             <h4>Surprise! The metaverse is going to suck for privacy</h4>
             <figure>
               <blockquote class="blockquote">
-                <p>&ldquo;Through a 30-person study of VR usage, the researchers â€?Vivek Nair (UCB), Gonzalo Munilla Garrido (TUM), and Dawn Song (UCB) â€?created a framework for assessing and analyzing potential privacy threats.&rdquo;</p>
+                <p>&ldquo;Through a 30-person study of VR usage, the researchers ï¿½?Vivek Nair (UCB), Gonzalo Munilla Garrido (TUM), and Dawn Song (UCB) ï¿½?created a framework for assessing and analyzing potential privacy threats.&rdquo;</p>
               </blockquote>
               <figcaption class="blockquote-footer">
                 Thomas Claburn in <cite title="Source Title">The Register</cite> &middot; <a href="https://www.theregister.com/2022/07/29/metaverse_privacy_study/" target="_blank">Read Article</a>
@@ -142,7 +143,45 @@
     <div class="bg-secondary py-5">
       <div class="container">
 
-            
+        <div class="card">
+          <div class="row align-items-center">
+            <div class="col-lg-4 order-lg-last">
+              <div class="card-img" style="background-image: url('img/pianist-prot.png'); background-size: contain">
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="p-4">
+                <h4>Pianist: Scalable zkRollups via Fully Distributed Zero-Knowledge Proofs</h4>
+                <h6 class="text-secondary">2024 &nbsp;|&nbsp; Tianyi Liu &middot; Tiancheng Xie &middot; Jiaheng Zhang
+                  &middot; Dawn Song &middot; Yupeng Zhang
+                  &nbsp;|&nbsp; S&P 2024</h6>
+                <p class="text-justify">
+                  In this work, we improve the scalability of these techniques by proposing new schemes of fully
+                  distributed ZKPs. Our schemes can improve the efficiency and the scalability of ZKPs using multiple
+                  machines, while the communication among the machines is minimal. With our schemes, the ZKP generation
+                  can be distributed to multiple participants in a model similar to the mining pools. Our protocols are
+                  based on Plonk, an efficient zero-knowledge proof system with a universal trusted setup. The first
+                  protocol is for data-parallel circuits.
+                  For computation of \(M\) sub-circuits of size \(T\) each, using \(M\) machines, the prover time is
+                  \(O(T\log
+                  T
+                  + M \log M)\), while the prover time of the original Plonk on a single machine is \(O(MT\log (MT))\).
+                  Our
+                  protocol incurs only \(O(1)\) communication per machine, and the proof size and verifier time are both
+                  \(O(1)\), the same as the original Plonk. Moreover, we show that with minor modifications, our second
+                  protocol can support general circuits with arbitrary connections while preserving the same proving,
+                  verifying, and communication complexity. The technique is general and may be of independent interest for
+                  other applications of ZKP.
+                </p>
+                <p class="mb-0"><a class="btn btn-primary btn-sm" href="Pianist/pianist.html"><i
+                      class="fa fa-arrow-up-right-from-square"></i>&nbsp; Learn More</a>&nbsp;<a
+                    class="btn btn-secondary btn-sm" href="https://eprint.iacr.org/2023/1271"><i class="fa fa-file-lines"></i>&nbsp; Read
+                    Paper</a>&nbsp;</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="card mt-4">
           <div class="row align-items-center">
             <div class="col-lg-4 order-lg-last">
@@ -241,7 +280,7 @@
               <div class="p-4">
                 <h4>Polynomial Commitment with a One-to-Many Prover and Applications</h4>
                 <h6 class="text-secondary">2022 &nbsp;|&nbsp; Jiaheng Zhang &middot; Tiancheng Xie &middot; Thang Hoang &middot; Elaine Shi &middot; Yupeng Zhang &nbsp;|&nbsp; https://www.usenix.org/system/files/sec22summer_zhang-jiaheng.pdf</h6>
-                <p class="text-justify">Verifiable Secret Sharing (VSS) is a foundational cryptographic primitive that serves as an essential building block in multi-party computation and decentralized blockchain applications. One of the most practical ways to construct VSS is through a polynomial commitment, where the dealer commits to a random polynomial whose 0-th coefficient encodes the secret to be shared, and proves the evaluation of the committed polynomial at a different point to each of N verifiers, i.e., the polynomial commitment is used in a â€œone-to-manyâ€?fashion. In this paper, we asymptotically improve polynomial commitment with one-to-many prover batching. We propose two novel schemes. First, we propose a scheme with optimal asymptotics in all dimensions in the trusted setup setting. Second, we propose a transparent scheme whose performance approximately matches the best-known scheme in the trusted setup setting. Our scheme in the trusted setup setting improves the proof size by 20x and the verifier time by 7.8x for \(2^{21}\) parties, with a small overhead on the prover time. Our transparent polynomial commitment removes the trusted setup and further improves the prover time by 2.3x.</p>
+                <p class="text-justify">Verifiable Secret Sharing (VSS) is a foundational cryptographic primitive that serves as an essential building block in multi-party computation and decentralized blockchain applications. One of the most practical ways to construct VSS is through a polynomial commitment, where the dealer commits to a random polynomial whose 0-th coefficient encodes the secret to be shared, and proves the evaluation of the committed polynomial at a different point to each of N verifiers, i.e., the polynomial commitment is used in a &quot;one-to-many&quot; fashion. In this paper, we asymptotically improve polynomial commitment with one-to-many prover batching. We propose two novel schemes. First, we propose a scheme with optimal asymptotics in all dimensions in the trusted setup setting. Second, we propose a transparent scheme whose performance approximately matches the best-known scheme in the trusted setup setting. Our scheme in the trusted setup setting improves the proof size by 20x and the verifier time by 7.8x for \(2^{21}\) parties, with a small overhead on the prover time. Our transparent polynomial commitment removes the trusted setup and further improves the prover time by 2.3x.</p>
                 <a class="btn btn-secondary btn-sm" href="https://www.usenix.org/system/files/sec22summer_zhang-jiaheng.pdf" target="_blank"><i class="fa fa-file-lines"></i>&nbsp; Read Paper</a>&nbsp;</p>
               </div>
             </div>
